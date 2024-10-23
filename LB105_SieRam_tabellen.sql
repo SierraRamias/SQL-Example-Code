@@ -26,12 +26,6 @@ CREATE TABLE `lb105_v31_m1`.`labormitarbeiter` ( `lmid` INT NULL AUTO_INCREMENT 
  ALTER TABLE `laborversuch` ADD PRIMARY KEY( `lvid`);
  --vtid wird in Versuchstyp zu einem PRIMARY KEY gemacht
  ALTER TABLE `versuchstyp` ADD PRIMARY KEY( `vtid`);
- 
---Aufgabe 1_2 b
--- im phpMyAdmin, geht man dann auf Designer, dann auf erzeuge verknüpfung und verbindet PK vtid vom Versuchstyp mit dem FK vtid vom Laborversuch
-
---Aufgabe 1_2 c
--- im phpMyAdmin, geht man dann auf Designer, dann auf erzeuge verknüpfung und verbindet PK lmid vom Labormitarbeiter mit dem FK lmid vom Laborversuch
 
 --Aufgabe 1_2 d
 --Es soll checken ob das Datum vor dem Aktuellen Datum ist
@@ -79,12 +73,6 @@ INSERT INTO `laborversuch` (`lvid`, `lmid`, `vtid`, `datum`, `ergebnis`, `bemerk
 INSERT INTO `laborversuch` (`lvid`, `lmid`, `vtid`, `datum`, `ergebnis`, `bemerkung`) VALUES (NULL, '3', '',
  '2018-03-29', 'am 1018-03-029 wurde von Alice ein Virenresistenz mit dem Ergebnis \"positiv\" durchgeführt');
 --Es gab eine Fehlermeldung, da ich ich in das Blob von bemerkung nichts einfügen konnte, da ich es nicht hatte
-
-
---Aufgabe 1_5
---mann muss virtuel bedingung basierend auf 1_2 d
---
-
 
 --Aufgabe 1_6 
 -- machen Sie eine Transaktion für den datum wechsel
