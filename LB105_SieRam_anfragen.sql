@@ -47,5 +47,3 @@ SELECT mitarbeiter.name, mitarbeiter.vorname, schadenfall. FROM mitarbeiter, sch
 WHERE schadenfall.MitarbeiterID IN 
  (SELECT schadenfall.MitarbeiterID FROM schadenfall 
   GROUP BY schadenfall.MitarbeiterID HAVING COUNT (schadenfall.MitarbeiterID) >4);
-  
---Aufgabe 2_17
